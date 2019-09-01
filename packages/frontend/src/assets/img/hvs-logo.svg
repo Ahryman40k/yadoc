@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg xmlns="http://www.w3.org/2000/svg" 
+   id="logo"
+   x="0px" y="0px" viewBox="0 0 102.4343 61.105087" version="1.1"
+   style="enable-background:new 0 0 250 250;" xml:space="preserve" >
+   <g transform="translate(-0.762631,-0.86731869)">
+      <g  transform="translate(-55.636489,-43.121316)">
+         <path class="accent-path" d="m 73.900024,85.456166 -2.672697,-0.133633 v -9.621702 l 3.207234,-4.944488 -3.608138,-3.608137 V 63.540068 H 64.679226 V 61.13464 l 4.944486,-4.142676 h 3.207234 l 4.142676,4.409948 3.34087,15.50163 13.898015,-5.879928" style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         <path class="standard-path" d="m 77.508163,88.930672 4.142676,3.875408 v 2.672696 l 3.207234,3.207234 2.806332,5.7463 8.018084,-8.151727 h 3.608139 l 2.539062,2.672696 5.61266,-5.612659 h 9.6217 l 3.54132,3.541321 h 6.08039 v -4.209497 h 4.14267 l 1.73725,-1.737252 h 3.0736" style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         <path class="standard-path" d="m 103.03685,64.654908 h 4.82044 v -3.374305 h 4.33839 l 8.255,-8.255 12.71391,5.121714 11.81007,-5.905037 v -6.025547 l 1.56664,-1.56664 h 2.1692 l 1.80766,1.687153 v 4.338394 h 3.01278 v 1.928175 l -3.01278,3.133283 v 3.494818 l 1.20511,1.205108 -7.41142,7.411423 h -2.22945 l -3.73584,3.07303 v 3.494818 l 3.01277,2.410216 v 4.338394 l -4.76018,4.760182" style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         <path class="standard-path" d="m 56.39912,87.672496 h 18.07664 l 6.869123,-5.543502 h 4.699926 l 2.892263,5.664015 h 5.061461 l 5.061458,-41.335253 4.217889,38.322479 4.21788,3.374306 h 3.61532 l 9.52037,-7.471677 h 4.57941 l 3.01278,6.387078 2.77175,0.843576 h 27.83803" style="fill:none;stroke:#272727;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+   </g>
+</svg>

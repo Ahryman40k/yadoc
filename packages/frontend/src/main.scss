@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+@import './app-theme';
+
+@import './styles/general';
+
+// Include material core styles.
+@include mat-core();
+
+
+// Define the light theme.
+$primary: mat-palette($mat-red);
+$accent:  mat-palette($mat-blue-gray, 500, 900, A100);
+$warn:    mat-palette($mat-deep-orange);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+@include doc-theme($theme);
