@@ -1,0 +1,9 @@
+<div class="program-list">
+  <a *ngFor="let program of programObservable | async" class="program-list-item"
+    [routerLink]="['/programs/', program.id]" >
+    <mat-card class="program-list-card">
+      <mat-card-title>{{program.name}}</mat-card-title>
+      <mat-card-content class="program-list-card-summary">{{program.summary}}</mat-card-content>
+    </mat-card>
+  </a>
+</div>

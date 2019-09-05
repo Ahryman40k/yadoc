@@ -2,9 +2,11 @@
 
 
 @import './app/pages/homepage/homepage-theme';
-@import './app/pages/modules/module-list-theme';
+@import './app/pages/programs/program/program-theme';
+@import './app/pages/programs/program-list/program-list-theme';
 @import './app/shared/footer/footer-theme';
 @import './app/shared/navbar/navbar-theme';
+@import './app/shared/markdown-viewer/markdown-theme';
 
 
 // Styles for the docs app that are based on the current theme.
@@ -36,7 +38,9 @@
  
 
   @include home-page-theme($theme);
-  @include module-list-theme($theme);
+  @include program-theme($theme);
+  @include programs-theme($theme);
   @include footer-theme($theme);
   @include nav-bar-theme($theme);
+  @include markdown-theme($theme);
 }

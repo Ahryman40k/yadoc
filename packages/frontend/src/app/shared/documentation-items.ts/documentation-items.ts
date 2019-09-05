@@ -1,37 +1,55 @@
 import {Injectable} from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of, BehaviorSubject } from 'rxjs';
+import {  first, filter, map } from 'rxjs/operators';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
-export interface DocModule {
-  id: string;
+export interface IDocumentationProject {
+  _id: string;
   name: string;
-  summary?: string;
-}
-
-
-export interface DocModules {
   summary: string;
-  modules: DocModule[];
+  repository: string;
+  docPath?: string;
 }
 
 
-const MODULES = {
-  summary: 'Hvs doc of everything', 
-  modules: [{
-  id: 'abcd-efgh-ijkl',
-  name: 'module doc 1',
-  summary: 'It is about something unbelievable'
-},{
-  id: 'abcd-efdf-ijkl',
-  name: 'module doc 2',
-  summary: 'Another unbelievable fact'
-}]
+export interface IDocumentationProgram {
+  name: string;
+  id: string;
+  summary: string;
+  projects: IDocumentationProject[];
 }
+
 
 
 @Injectable()
 export class DocumentationItems {
-  getModules(): DocModules {
-    return MODULES;
+
+  private programs = new BehaviorSubject<IDocumentationProgram[]>([]);
+  
+
+  constructor( private httpClient: HttpClient ){
+    this.httpClient.get<IDocumentationProgram[]>( '/assets/doc/_deepdoc.json').subscribe( data => {
+      this.programs.next( data );
+    })
+  }
+
+  Programs(): Observable<IDocumentationProgram[]> {
+    return this.programs.asObservable();
+  }
+
+  programDetails( id: string): Observable<IDocumentationProgram> {
+    return this.programs.asObservable().pipe(
+      map( ps => ps.find( p => p.id === id  ) )
+    ) 
+  }
+
+  projects() {
+
   }
 
 
+  projectDetails() {
+    
+  }
 }

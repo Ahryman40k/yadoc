@@ -1,0 +1,35 @@
+<div class="program" *ngIf="program">
+    <mat-toolbar>
+        <button color="accent" mat-icon-button>
+            <mat-icon>home</mat-icon>
+        </button>
+        <span>{{program.name}}</span>
+    </mat-toolbar>
+    <mat-sidenav-container>
+
+        <mat-sidenav opened mode="side">
+
+            <mat-nav-list>
+                <a mat-list-item *ngFor="let project of program.projects">{{project.name}} </a>
+            </mat-nav-list>
+
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <div>
+                <h1>Welcome to {{program.name}} program documentation</h1>
+                <p>{{program.summary}}</p>
+                <p>Program is composed by the following projects</p>
+                <mat-list>
+                    <mat-list-item *ngFor="let project of program.projects">
+                        <mat-icon color="accent" mat-list-icon>folder</mat-icon>
+                        <h4 mat-line>{{project.name}}</h4>
+                        <p mat-line> {{project.summary }} </p>
+                    </mat-list-item>
+
+                </mat-list>
+            </div>
+
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

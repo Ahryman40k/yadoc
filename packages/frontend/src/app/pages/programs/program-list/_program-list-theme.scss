@@ -1,0 +1,16 @@
+@mixin programs-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .docs-component-category-list-card-summary {
+    color: mat-color($foreground, secondary-text);
+  }
+
+  mat-card {
+    background: mat-color($accent) !important;
+    color: mat-color($accent, default-contrast) !important;
+  }
+}

@@ -5,7 +5,8 @@ import { HomepageComponent as Homepage } from './pages/homepage/home.page';
 
 const routes: Routes = [
   { path: '', component: Homepage, pathMatch:'full', data: {} },
-  { path: 'modules', loadChildren: './pages/modules/module-list.module#ModuleListModule'}
+  { path: 'programs', loadChildren: './pages/programs/programs.module#ProgramsModule'},
+  { path: 'programs/:id/:projectId', loadChildren: './pages/project/project.module#ProjectModule'}
 ];
 
 
