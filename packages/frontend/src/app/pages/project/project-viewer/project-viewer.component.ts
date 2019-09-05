@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IDocumentationProgram, DocumentationItems } from 'src/app/shared/documentation-items.ts/documentation-items';
+import { IDocumentationProgram, DocumentationItems, IDocumentationProject } from 'src/app/shared/documentation-items.ts/documentation-items';
 import { ActivatedRoute } from '@angular/router';
 import { ProjectNavigatorService } from '../project-navigator.service';
 
@@ -11,29 +11,42 @@ import { ProjectNavigatorService } from '../project-navigator.service';
 export class ProjectViewerComponent implements OnInit {
 
   markdown: string;
-  projectId: string;
+  project: IDocumentationProject;
 
   constructor(
-    private route: ActivatedRoute, 
-    private contentProvider: ProjectNavigatorService) { 
+    private route: ActivatedRoute,
+    private contentProvider: ProjectNavigatorService,
+    private docItems: DocumentationItems,
+  ) {
 
   }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      const {id, projectId } = params;
+      const { projectId } = params;
 
-      this.projectId = projectId;
+      this.docItems.projectDetails(projectId).subscribe(project => {
 
-      this.contentProvider.markdown({ program: id, project: projectId}).subscribe ( md => {
-        console.log(md);
-        this.markdown = md;
-      })
- 
-      this.contentProvider.chapters({ program: id, project: projectId}).subscribe ( md => {
-        console.log(md);
+        if (project) {
+          this.project = project;
 
-      })
+          this.contentProvider.markdown({ program: project._ownerId, project: project.name }).subscribe(md => {
+            console.log(md);
+            this.markdown = md;
+          })
+
+          this.contentProvider.chapters({ program: project._ownerId, project: project.name }).subscribe(md => {
+            console.log(md);
+
+          })
+        }
+
+      });
+
+
+
+
+
 
     });
 

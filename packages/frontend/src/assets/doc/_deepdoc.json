@@ -6,6 +6,7 @@
         "projects": [
             {
                 "_id": "3c53398a-380e-4385-9c23-c93570ff0c73",
+                "_ownerId": "HVSAPI",
                 "name": "fhir-observation",
                 "summary": "Atom server providing CRUD method for FHIR Observation resources",
                 "repository": "",
@@ -13,6 +14,7 @@
             },
             {
                 "_id": "fcead2fb-b630-4fd1-9d52-0757dfa482d1",
+                "_ownerId": "HVSAPI",
                 "name": "fhir-procedure",
                 "summary": "Atom server providing CRUD method for FHIR Procedure resources",
                 "repository": ""
@@ -26,12 +28,14 @@
         "projects": [
             {
                 "_id": "c7ca60d4-a1e3-47b6-85f0-100588509525",
+                "_ownerId": "TRWEB",
                 "name": "frontend",
                 "summary": "HVS Angular application managing tranfusion workflow",
                 "repository": ""
             },
             {
                 "_id": "6c6fc370-47a1-47aa-bdc1-ee0f57acdd88",
+                "_ownerId": "TRWEB",
                 "name": "transfusion-backend",
                 "summary": "Dedicated server to HVS Tranfusion application",
                 "repository": ""
@@ -45,12 +49,14 @@
         "projects": [
             {
                 "_id": "93dc2d0d-4afd-419a-a738-8b1d7483d852",
+                "_ownerId": "PATI",
                 "name": "frontend",
                 "summary": "HVS Angular application that display administrative view of a patient",
                 "repository": ""
             },
             {
                 "_id": "5ee6d0a0-b708-4d1f-8d26-b59dcd461f95",
+                "_ownerId": "PATI",
                 "name": "backend-pati",
                 "summary": "Dedicated server to PATI",
                 "repository": ""

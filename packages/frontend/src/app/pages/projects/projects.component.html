@@ -1,1 +1,9 @@
-<p>projects works!</p>
+<div class="project-list">
+  <a *ngFor="let project of projects | async" class="project-list-item"
+    [routerLink]="['/projects/', project._id]">
+   <mat-card class="project-list-card">
+    <mat-card-title>{{project.name}}</mat-card-title>
+    <mat-card-content class="project-list-card-summary">{{project.summary}}</mat-card-content>
+  </mat-card>
+  </a>
+</div>

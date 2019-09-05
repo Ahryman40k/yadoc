@@ -11,13 +11,11 @@ import { DocumentationItems } from './shared/documentation-items.ts/documentatio
 import { ProgramsModule } from './pages/programs/programs.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { ProjectModule } from './pages/project/project.module';
-import { ProjectsComponent } from './pages/projects/projects.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectsComponent,
   ],
   imports: [
     BrowserModule,

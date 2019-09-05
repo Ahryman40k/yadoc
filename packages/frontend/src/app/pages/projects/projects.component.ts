@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DocumentationItems, IDocumentationProject } from 'src/app/shared/documentation-items.ts/documentation-items';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  projects: Observable<IDocumentationProject[]>
+
+  constructor(
+    public docItems: DocumentationItems,
+    private _route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.projects = this.docItems.projects()
+
   }
 
 }

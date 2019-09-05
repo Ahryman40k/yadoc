@@ -10,7 +10,7 @@
         <mat-sidenav opened mode="side">
 
             <mat-nav-list>
-                <a mat-list-item *ngFor="let project of program.projects">{{project.name}} </a>
+                <a mat-list-item *ngFor="let project of program.projects" [routerLink]="['/programs/', program.id, project._id ]" >{{project.name}} </a>
             </mat-nav-list>
 
         </mat-sidenav>
