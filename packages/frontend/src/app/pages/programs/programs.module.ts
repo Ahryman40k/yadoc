@@ -6,6 +6,7 @@ import { ProgramListComponent } from './program-list.component';
 import { ProgramComponent } from './program.component';
 import { ProgramsRoutingModule } from './programs-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,7 @@ providers: [
 ],
   imports: [
     CommonModule,
+    RouterModule,
     HttpClientModule,
     MatCardModule,
     MatToolbarModule,

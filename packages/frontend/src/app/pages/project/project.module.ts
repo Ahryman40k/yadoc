@@ -4,7 +4,8 @@ import { ProjectViewerComponent } from './project-viewer/project-viewer.componen
 import { ProjectRoutingModule } from './project-routing.module';
 import { ProjectNavigatorService } from './project-navigator.service';
 import { MarkdownViewerModule } from 'src/app/shared/markdown-viewer/markdown-viewer.module';
-import { MatIconModule, MatToolbarModule } from '@angular/material';
+import { MatIconModule, MatToolbarModule, MatSidenavModule, MatListModule } from '@angular/material';
+import { TableOfContentsModule } from 'src/app/shared/table-of-contents/table-of-contents.module';
 
 
 @NgModule({
@@ -16,7 +17,10 @@ import { MatIconModule, MatToolbarModule } from '@angular/material';
     ProjectRoutingModule,
     MarkdownViewerModule,
     MatIconModule,
+    MatSidenavModule,
+    MatListModule,
     MatToolbarModule,
+    TableOfContentsModule,
   ],
   providers: [
     ProjectNavigatorService,

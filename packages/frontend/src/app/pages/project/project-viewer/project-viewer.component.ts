@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IDocumentationProgram, DocumentationItems, IDocumentationProject } from 'src/app/shared/documentation-items.ts/documentation-items';
 import { ActivatedRoute } from '@angular/router';
-import { ProjectNavigatorService } from '../project-navigator.service';
+import { ProjectNavigatorService, IChapter } from '../project-navigator.service';
 
 @Component({
   selector: 'app-project-viewer',
@@ -11,6 +11,8 @@ import { ProjectNavigatorService } from '../project-navigator.service';
 export class ProjectViewerComponent implements OnInit {
 
   markdown: string;
+  chapters: IChapter[];
+
   project: IDocumentationProject;
 
   constructor(
@@ -30,27 +32,25 @@ export class ProjectViewerComponent implements OnInit {
         if (project) {
           this.project = project;
 
-          this.contentProvider.markdown({ program: project._ownerId, project: project.name }).subscribe(md => {
-            console.log(md);
-            this.markdown = md;
-          })
+          this.loadMarkdown({ file: 'index.md', url: '' });
 
-          this.contentProvider.chapters({ program: project._ownerId, project: project.name }).subscribe(md => {
-            console.log(md);
-
+          this.contentProvider.chapters({ program: project._ownerId, project: project.name }).subscribe(chapters => {
+            console.log(chapters);
+            this.chapters = chapters;
           })
         }
 
       });
 
-
-
-
-
-
     });
 
+  }
 
+  loadMarkdown(c: IChapter) {
+    this.contentProvider.markdown({ program: this.project._ownerId, project: this.project.name, chapter: c.file  }).subscribe(md => {
+      console.log(md);
+      this.markdown = md;
+    })
   }
 
 }

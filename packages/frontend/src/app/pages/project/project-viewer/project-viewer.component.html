@@ -1,9 +1,29 @@
 <div class="project" *ngIf="project">
     <mat-toolbar>
-        <button color="accent" mat-icon-button>
+        <button color="primary" mat-icon-button>
             <mat-icon>home</mat-icon>
         </button>
         <span>{{project.name}}</span>
     </mat-toolbar>
-    <app-markdown-viewer [data]="markdown"></app-markdown-viewer>
+
+    <mat-sidenav-container>
+
+        <mat-sidenav opened mode="side">
+
+            <mat-nav-list dense>
+                <a mat-list-item *ngFor="let c of chapters" (click)="loadMarkdown(c)">{{c.metadata.title || 'No meta founds'}} </a>
+            </mat-nav-list>
+
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+
+            <app-markdown-viewer [data]="markdown"></app-markdown-viewer>
+            <table-of-contents #toc *ngIf="showToc | async" headerSelectors=".docs-api-h3,.docs-api-h4"
+                container=".mat-drawer-content"></table-of-contents>
+
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+
+
 </div>

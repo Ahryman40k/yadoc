@@ -8,19 +8,21 @@
 
 
 // Define the light theme.
-$primary: mat-palette($mat-red);
-$accent:  mat-palette($mat-blue-gray, 500, 900, A100);
-$warn:    mat-palette($mat-deep-orange);
+$primary: mat-palette($mat-red, 700, 300, 900);
+$accent: mat-palette($mat-blue-gray, 500, 900, A100);
+$warn: mat-palette($mat-deep-orange, A200);
 
 $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
 @include doc-theme($theme);
 
-html, body {
-    height: 100%;
-  }
-  body {
-    display: flex;
-    flex-direction: column;
-  }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}

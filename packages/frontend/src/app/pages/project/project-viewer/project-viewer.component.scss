@@ -2,5 +2,12 @@
 
 .project {
     padding-top: 60px;
+    display: flex;
+    flex-direction: column;
 }
+
+.project .mat-sidenav-container {
+    flex: 1;
+}
+
 

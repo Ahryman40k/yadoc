@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, BehaviorSubject } from 'rxjs';
-import { first, filter, map, tap, mergeAll } from 'rxjs/operators';
+import { first, filter, map, tap, mergeAll, flatMap } from 'rxjs/operators';
 
 export interface IDocumentationProject {
   _id: string;

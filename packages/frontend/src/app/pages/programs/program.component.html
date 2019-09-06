@@ -1,7 +1,7 @@
 <div class="program" *ngIf="program">
     <mat-toolbar>
         <button color="accent" mat-icon-button>
-            <mat-icon>home</mat-icon>
+            <mat-icon [routerLink]="['/programs']"  >home</mat-icon>
         </button>
         <span>{{program.name}}</span>
     </mat-toolbar>

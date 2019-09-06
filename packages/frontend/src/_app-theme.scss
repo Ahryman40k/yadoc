@@ -7,7 +7,7 @@
 @import './app/shared/footer/footer-theme';
 @import './app/shared/navbar/navbar-theme';
 @import './app/shared/markdown-viewer/markdown-theme';
-
+@import './app/pages/project/project-viewer-themes';
 
 // Styles for the docs app that are based on the current theme.
 @mixin doc-theme($theme) {
@@ -43,4 +43,5 @@
   @include footer-theme($theme);
   @include nav-bar-theme($theme);
   @include markdown-theme($theme);
+  @include project-viewer-theme($theme);
 }
