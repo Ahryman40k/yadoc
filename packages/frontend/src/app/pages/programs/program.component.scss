@@ -1,5 +1,23 @@
 @import '../../../styles/constants';
 
+
+$height: calc(100% - 64px);
+
 .program {
     padding-top: 60px;
+    height: $height;
+}
+
+
+.program-content {
+    padding-left: 16px;
+}
+
+
+.mat-sidenav-container {
+    height: $height;
+}
+
+.mat-nav-list {
+    height: $height;
 }
