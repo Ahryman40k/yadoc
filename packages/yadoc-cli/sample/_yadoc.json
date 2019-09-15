@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Yadoc",
+        "id": "CAL",
+        "summary": "Best documentation ever",
+        "projects": [
+            {
+                "name": "angular-frontend",
+                "summary": "Angular frontend application that display doc",
+                "repository": "git@github.com:Ahryman40k/yadoc.git",
+                "docPath": "packages/frontend/doc"
+            },
+            {
+                "name": "yadoc-cli",
+                "summary": "Command line interface for yadoc",
+                "repository": "git@github.com:Ahryman40k/yadoc.git",
+                "docPath": "packages/yadoc-cli/doc"
+            }
+        ]
+    }
+]
