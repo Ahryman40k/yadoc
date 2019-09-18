@@ -82,7 +82,7 @@ commander
                         })
 
                         .then(() => {
-                            console.log(chalk.green(`command vomplete in ${tmpObj}.`))
+                            console.log(chalk.green(`command complete in ${tmpObj}.`))
                         })
 
                         .catch(err => {
@@ -91,6 +91,7 @@ commander
                     // build _chapters.json (list each md doc)
                     // copy yadoc file  in out dir
                     // in yadoc, create _id (projectid and ownerId )
+
                 })
             })
 
